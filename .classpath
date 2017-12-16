@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="BankManager/src"/>
+	<classpathentry kind="src" path="Chess/src"/>
+	<classpathentry kind="src" path="Java/src"/>
+	<classpathentry kind="src" path="Java/Udacity/src"/>
+	<classpathentry kind="src" path="ProgressiveScramble/src"/>
+	<classpathentry kind="src" path="StaticFields/src"/>
+	<classpathentry kind="output" path="BankManager/out/production/BankManager"/>
+</classpath>

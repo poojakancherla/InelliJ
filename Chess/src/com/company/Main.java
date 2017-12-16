@@ -30,9 +30,19 @@ public class Main
     }
 
 
-    class Piece extends Position
+    class Piece
     {
-        Position position;
+        boolean isValidMove(Position newPosition){
+            if(position.row>0 && position.column>0
+                    && position.row<8 && position.column<8){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        }
+
         boolean isValidMove(Position newPosition)
         {
 
@@ -49,35 +59,36 @@ public class Main
     }
 
 
-//    class Rock extends Piece{
-//        boolean isValidMove(Position newPosition){
-//            if(newPosition.column == this.column || newPosition.row == this.row){
-//                return true;
-//            }
-//            else{
-//                return false;
-//            }
-//        }
-//    }
-
-    class Valid extends Piece
-    {
-        Position testPosition = new Position(3,10);
-        boolean x = isValidMove(testPosition);
-        if(x == "true")
-        {
-            System.out.println("Yes, I can move there.");
-        }
-        else
-        {
-            System.out.println("Nope, cannot!");
+    class Rock extends Piece{
+        boolean isValidMove(Position newPosition){
+            if(newPosition.column == this.column || newPosition.row == this.row){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
     }
+
+//    class Valid extends Piece
+//    {
+//        Position testPosition = new Position(3,10);
+//        boolean x = isValidMove(testPosition);
+//        if(x == "true")
+//        {
+//            System.out.println("Yes, I can move there.");
+//        }
+//        else
+//        {
+//            System.out.println("Nope, cannot!");
+//        }
+//    }
 
 
     public static void main(String[] args)
     {
-        Valid();
+        Rock obj = new Rock();
+        obj.isValidMove(obj.newPosition);
     }
 
     }
